@@ -12,13 +12,18 @@ import database as db
 cf.SendMessage()
 
 # - test to return an output from module --- #
-dir = cf.LookUp('simaris').raw()
+dir = cf.LookUp('simaris').raw() #< -- localiza diretório da pasta do ex. simaris
+dir
 db_dir = cf.LookUp('nxtools').db_path()
+db_dir
 
 # - test to connect with DB and execute commands --- #
 conn = db.conn(db_dir)
 c = conn.cursor()
 c.execute("select name from sqlite_master where type = 'table'")
+
+
+##c.execute("select * from '01_discount where 'articlenumber' = '8PQ%'")
 print(c.fetchall())
 conn.commit()
 conn.close()

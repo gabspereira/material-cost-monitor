@@ -22,11 +22,11 @@ class LookUp():
 
     def processed(self):
         if self.tool == 'nxtools':
-            dir = self.data_path + '/processed/nxtools/FY20/'
+            dir = self.data_path + '/processed/nxtools/'
         elif self.tool == 'simaris':
-            dir = self.data_path + '/processed/simaris/SCF2.4/'
+            dir = self.data_path + '/processed/simaris/'
         elif self.tool == 'salesforce':
-            dir = self.data_path + '/processed/salesforce/2020_05_05/'
+            dir = self.data_path + '/processed/salesforce/'
         else:
             print('Available options: nxtools, simaris, salesforce')
             dir = 'Test: Error to get directory.'
