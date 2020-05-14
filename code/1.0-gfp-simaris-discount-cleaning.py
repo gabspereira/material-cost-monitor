@@ -4,6 +4,7 @@ sys.path.insert(1, cwd)
 
 #import main custom functions
 import custom_funcs as cf
+import pandas as pd
 
 path = cf.LookUp('simaris').raw()
 path_processed = cf.LookUp('simaris').processed()
@@ -40,3 +41,4 @@ vpck.head()
 
 discount = pd.concat([group, vpck, art_nr_bodies])
 discount.to_csv(path_processed + '01_discount.csv', index=False, encoding='utf-8')
+print('01_discount.csv was gerenated - OK')
