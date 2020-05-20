@@ -2,8 +2,19 @@ import custom_funcs as cf
 import pandas as pd
 from sqlalchemy import create_engine
 
+# list all files to upload
+from os import walk
+path = cf.LookUp('simaris').processed()
+prep_files = []
+for (dirpath, dirnames, filenames) in walk(path):
+    prep_files.extend(filenames)
+    break
+print(prep_files)
+
+
 
 # select processed file
+
 file_name = '01_discount.csv'
 file_path = cf.LookUp('simaris').processed() + file_name
 
