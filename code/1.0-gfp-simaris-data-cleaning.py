@@ -19,4 +19,3 @@ for file_to_clean in raw_files:
     df.dropna(axis=1, how='all', inplace=True)
     df.to_csv(path_processed + file_to_clean[:-4] + 'csv', index=False, encoding='utf-8')
     print(file_to_clean + ' was processed and converted to csv format. [OK]')
-    break
