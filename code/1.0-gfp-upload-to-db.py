@@ -21,4 +21,4 @@ for file_name in file_name_list:
     df.to_sql(file_name[:-4], con=connection, if_exists="replace", index=False)
     #connection.execute("SELECT * FROM '01_discount'").fetchall()
     print(file_name[:-4] + ' uploaded to db complete! [OK]')
-    break
+    
