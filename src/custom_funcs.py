@@ -17,8 +17,10 @@ class LookUp():
             dir = self.data_path + '/raw/salesforce/2020_05_05/'
         elif self.tool == 'compras':
             dir = self.data_path + '/raw/compras/FY20/'
+        elif self.tool == 'sap':
+            dir = self.data_path + '/raw/sap/'
         else:
-            print('Available options: nxtools, simaris, salesforce, compras')
+            print('Available options: nxtools, simaris, salesforce, compras, sap')
             dir = 'Test: Error to get directory.'
         return dir
 
@@ -31,8 +33,10 @@ class LookUp():
             dir = self.data_path + '/processed/salesforce/'
         elif self.tool == 'compras':
             dir = self.data_path + '/processed/compras/'
+        elif self.tool == 'sap':
+            dir = self.data_path + '/processed/sap/'
         else:
-            print('Available options: nxtools, simaris, salesforce, compras')
+            print('Available options: nxtools, simaris, salesforce, compras, sap')
             dir = 'Test: Error to get directory.'
         return dir
 
@@ -46,7 +50,9 @@ class LookUp():
             dir = self.data_path + '/db/salesforce.db'
         elif self.tool == 'compras':
             dir = self.data_path + '/db/compras.db'
+        elif self.tool == 'sap':
+            dir = self.data_path + '/db/sap.db'
         else:
-            print('Available options: nxtools, simaris, salesforce, compras')
+            print('Available options: nxtools, simaris, salesforce, compras, sap')
             dir = 'Test: Error to get directory.'
         return dir
