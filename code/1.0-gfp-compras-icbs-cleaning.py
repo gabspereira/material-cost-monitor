@@ -20,12 +20,13 @@ mc = pd.read_excel(path + 'Lista preços MC FY20.xlsx', sheet_name='Lista de pre
 mc.dropna(axis=1, how='all', inplace=True)
 mc.dropna(subset=['Desconto ICB FY20 \n(Q1 e Q2)'], inplace=True)
 
+mc.head()
 
 
 cp = pd.read_excel(path + 'Lista preços CP FY20.xlsx', sheet_name='CP BR FY20', header=4)
 cp.dropna(axis=1, how='all', inplace=True)
 cp.dropna(subset=['Desconto CP BR'], inplace=True)
-
+cp.head()
 
 
 rabatt = pd.read_excel(path + 'Lista preços CP FY20.xlsx', sheet_name='Nova base - Jundai Rabatt FY20.', header=4)
@@ -35,10 +36,11 @@ rabatt.dropna(subset=['EM MS customer discount BR (USD) '], inplace=True)
 
 dffa = pd.read_excel(path + 'Lista preços DF FA FY20.xlsx', sheet_name='DF FA DE FY20', header=4)
 dffa.dropna(axis=1, how='all', inplace=True)
-
+dffa.head()
 
 lp = pd.read_excel(path + 'Lista preços LP FY20.xlsx', sheet_name='LP DE FY20', header=4)
 lp.dropna(axis=1, how='all', inplace=True)
+lp.head()
 
 # for file_to_clean in raw_files:
 #     df = pd.read_excel(path + file_to_clean)
