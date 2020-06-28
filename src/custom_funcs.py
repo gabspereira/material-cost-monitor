@@ -6,7 +6,7 @@ class LookUp():
 
     def __init__(self, tool):
         self.tool = tool
-        self.data_path = 'K:/EM_MS/EM_MS_BA/Controladoria/CO_OP/Cost Controlling/Product Cost/40 Material Cost Monitor/data'
+        self.data_path = 'S:/EM_MS/EM_MS_BA/Controladoria/CO_OP/Cost Controlling/Product Cost/40 Material Cost Monitor/data'
 
     def raw(self):
         if self.tool == 'nxtools':

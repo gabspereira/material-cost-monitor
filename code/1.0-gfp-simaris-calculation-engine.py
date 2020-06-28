@@ -1,5 +1,7 @@
 #main libraries
-import custom_funcs as cf
+import simaris as scf
+from tkinter import Tk
+from tkinter.filedialog import askopenfilename
 #import simaris_calc_rules as calc
 import pandas as pd
 import os
@@ -10,24 +12,25 @@ eur = 4.43
 reg_trans_land = 1 + 17/100 + 9/100
 reg_trans_short = 1 + 17/100 + 28/100
 fi = 1.26
-usd = 3.8190
-eur = 4.43
 corr = eur / usd
 
 # articlenumber to find out
-lookup_list = pd.read_excel('C:/UserData/z003vuba/Documents/07 Projetos Python/articlenumbers.xlsx', header=None)
+print("Please select an Excel file with contains the list of articlenumbers you want to find into the LV Database [FY20].")
+Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+
+lookup_list = pd.read_excel(filename, header=None)
 lookup_list = lookup_list.rename(columns={0: 'articlenumber'})
 
 lookup_list
 
 # database sources connetion
-csv_dir = cf.LookUp('simaris').processed()
-discount = pd.read_csv(csv_dir + '01_discount.csv', encoding='utf-8')
-devices1 = pd.read_csv(csv_dir + '02_siemens_devices.csv', encoding='utf-8')
-devices2 = pd.read_csv(csv_dir + '03_siemens_devices2.csv', encoding='utf-8')
-local_devices = pd.read_csv(csv_dir + '04_local_devices.csv', encoding='utf-8')
-components = pd.read_csv(csv_dir + '05_components.csv', encoding='utf-8')
-single_parts = pd.read_csv(csv_dir + '06_single_parts.csv', encoding='utf-8')
+discount = scf.Table('discount').current()
+devices1 = scf.Table('devices1').current()
+devices2 = scf.Table('devices2').current()
+local_devices = scf.Table('local_devices').current()
+components = scf.Table('components').current()
+single_parts = scf.Table('single_parts').current()
 
 
 # -- Start: Simaris material cost calculation
@@ -98,6 +101,6 @@ for index, row in lookup_list.iterrows():
 
 # Consolidate data in a single report
 
-df.to_excel('report.xlsx', index=False)
-os.startfile('report.xlsx')
+df.to_excel('C:/Temp/report.xlsx', index=False)
+os.startfile('C:/Temp/report.xlsx')
 print('\n Process complete! [INFO]')
