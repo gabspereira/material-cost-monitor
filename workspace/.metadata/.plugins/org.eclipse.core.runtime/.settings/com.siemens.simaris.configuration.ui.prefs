@@ -1,9 +1,0 @@
-eclipse.preferences.version=1
-showDialogSettings.com.siemens.simaris.configuration.application.scfu.ShowNewProjectWizard=true
-showDialogSettings.com.siemens.simaris.configuration.application.scfu.productWizard=true
-showDialogSettings.com.siemens.simaris.configuration.application.scfu.startupWizard=true
-showDialogSettings.com.siemens.simaris.configuration.product.core.dm.DmMessage.INFO_ELEMENTS_SAVED_TO_LIBRARY=true
-showDialogSettings.com.siemens.simaris.configuration.product.core.dm.DmMessage.QUESTION_CHANGE_TYPICAL=true
-showDialogSettings.com.siemens.simaris.configuration.product.core.dm.DmMessage.QUESTION_UNFIX_ELEMENT=true
-showDialogSettings.com.siemens.simaris.configuration.product.scopes.ui.pg.updateMultiLocations=true
-showDialogSettings.com.siemens.simaris.configuration.product.ui.libraryElementCompareDialog=true

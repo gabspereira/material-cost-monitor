@@ -1,9 +1,0 @@
-com.siemens.simaris.configuration.device.core.DefaultOrderNumberObjectFactory.currency=BRL
-com.siemens.simaris.configuration.device.core.DefaultOrderNumberObjectFactory.currencyFactor=1.0
-com.siemens.simaris.configuration.device.core.DefaultOrderNumberObjectFactory.currencyFactorDate=1594649778626
-com.siemens.simaris.configuration.device.core.DefaultOrderNumberObjectFactory.currencyFactorFrom=EUR
-com.siemens.simaris.configuration.device.core.master.MasterOrderNumberObjectFactory.currency=BRL
-com.siemens.simaris.configuration.device.core.master.MasterOrderNumberObjectFactory.currencyFactor=1.0
-com.siemens.simaris.configuration.device.core.master.MasterOrderNumberObjectFactory.currencyFactorDate=1593801100885
-com.siemens.simaris.configuration.device.core.master.MasterOrderNumberObjectFactory.currencyFactorFrom=EUR
-eclipse.preferences.version=1
