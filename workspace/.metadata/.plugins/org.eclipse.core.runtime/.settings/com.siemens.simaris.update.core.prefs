@@ -1,0 +1,4 @@
+configureAutoUpdate=false
+eclipse.preferences.version=1
+enableAutoUpdate=true
+skipPromptOnRepositoryAccessProblems=false
